@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @responsive {
+    .scrollbars-hidden::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.gradient {
+  background: linear-gradient(135deg, #e93963 0%, #d82d8d 50.21%, #c720b6 100%);
+}
+
+.gradient-rect {
+  background: linear-gradient(135deg, #fd2d5f 0%, #ed2693 49.05%, #dc1fc9 100%);
+  margin-top: 4.5rem;
+}
+
+.text-gradient {
+  color: #d22b9a;
+}
+
+.timeline-circle::before {
+  content: "";
+  transform: translate(-50%, -50%);
+  left: -30px;
+  @apply absolute top-1/2 w-5 h-5 rounded-full bg-white border-2 border-black;  
+}
+
+.timeline-lg-circle::after {
+  content: "";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  right: -110px;
+  @apply top-1/2 w-[30px] h-[30px] bg-white rounded-full border border-[#D98624];
+}
+
+.timeline-lg-circle.timeline-active {
+  @apply py-5 bg-[#D98624] rounded-[10px] ml-0 text-white px-8
+}
+
+.timeline-lg-circle.timeline-active::after{
+  @apply border-[7px] border-[#D98624]
+}
+
+@media (min-width: 1280px) {
+  .timeline-circle::before {
+    content: "";
+    display: none;
+  }
+}
+
+.code,
+.stack,
+.gitfork,
+.puzzle-piece,
+.database,
+.grid-four {
+  border-radius: 20px;
+}
+
+.stack {
+  background: #6d6bd91f;
+}
+
+.gitfork {
+  background: #6bd9d91f;
+}
+
+.puzzle-piece {
+  background: #d9936b1f;
+}
+
+.database {
+  background: #d96ba01f;
+}
+
+.grid-four {
+  background: #d96b6b1f;
+}
+
+.arrow {
+  background: #171729;
+}
+
+.plus {
+  border-color: #d98624;
+}
+
+.bg-blue-secondary {
+  background: #5424d9;
+}
+
+.crypto-shadow {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  border-radius: 20px;
+}
+
+.refund-btn {
+  background: #0accda;
+  box-shadow: 0px 22px 44px rgba(10, 204, 218, 0.35);
+  border-radius: 20px;
+}
+
+.current-slide {
+  background: #171729;
+}
