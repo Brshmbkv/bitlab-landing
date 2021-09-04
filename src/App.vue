@@ -177,14 +177,14 @@
         <p class="text-[14px] xl:text-[18px]">С нуля изучите синтаксис языка и научитесь создавать собственные алгоритмы по лучшим практикам, решать задачи любой сложности.</p>
       </div>
       <div>
-        <div class="h-20 w-20 flex items-center justify-center mb-6 xl:mb-8 stack">
+        <div class="h-20 w-20 flex items-center justify-center mb-6 xl:mb-8 bg-[#6d6bd91f] rounded-[20px]">
           <img src="/Stack.svg" alt="stack icon" />
         </div>
         <h3 class="text-xl font-bold mb-4 xl:text-2xl">Применять принципы ООП</h3>
         <p class="text-[14px] xl:text-[18px]">Вы изучите 4 концепции объектно-оринетированного программирования и научитесь их применять в своих небольших приложениях на Java.</p>
       </div>
       <div>
-        <div class="h-20 w-20 flex items-center justify-center mb-6 xl:mb-8 gitfork">
+        <div class="h-20 w-20 flex items-center justify-center mb-6 xl:mb-8 bg-[#6bd9d91f] rounded-[20px]">
           <img src="/GitFork.svg" alt="gitflok icon" />
         </div>
         <h3 class="text-xl font-bold mb-4 xl:text-2xl">Работать с сетями и многопоточностью</h3>
@@ -193,14 +193,14 @@
         </p>
       </div>
       <div>
-        <div class="h-20 w-20 flex items-center justify-center mb-6 xl:mb-8 puzzle-piece">
+        <div class="h-20 w-20 flex items-center justify-center mb-6 xl:mb-8 bg-[#d9936b1f] rounded-[20px]">
           <img src="/PuzzlePiece.svg" alt="puzzle piece icon" />
         </div>
         <h3 class="text-xl font-bold mb-4 xl:text-2xl">Оптимизировать код</h3>
         <p class="text-[14px] xl:text-[18px]">Научитесь отлавливать и работать над исключениями, сможете разбираться чужом коде и структурировать его.</p>
       </div>
       <div>
-        <div class="h-20 w-20 flex items-center justify-center mb-6 xl:mb-8 database">
+        <div class="h-20 w-20 flex items-center justify-center mb-6 xl:mb-8 bg-[#d96ba01f] rounded-[20px]">
           <img src="/Database.svg" alt="database icon" />
         </div>
         <h3 class="text-xl font-bold mb-4 xl:text-2xl">Научитесь работать с базой данных MySQL</h3>
@@ -209,8 +209,8 @@
         </p>
       </div>
       <div>
-        <div class="h-20 w-20 flex items-center justify-center mb-6 xl:mb-8 grid-four">
-          <img src="/GridFour.svg" alt="database icon" />
+        <div class="h-20 w-20 flex items-center justify-center mb-6 xl:mb-8 bg-[#d96b6b1f] rounded-[20px]">
+          <img src="/GridFour.svg" alt="grid icon" />
         </div>
         <h3 class="text-xl font-bold mb-4 xl:text-2xl">Графический интерфейс</h3>
         <p class="text-[14px] xl:text-[18px]">
@@ -231,33 +231,61 @@
       <h1 class="absolute top-[249px] mx-36 w-[543px] text-[56px] font-bold leading-[72px]">Как проходит обучение</h1>
     </div>
     <div class="mx-4 mb-6 xl:m-0 xl:flex xl:flex-row-reverse justify-between xl:mx-36 xl:relative xl:-top-36">
-      <div class="relative h-[223px] w-[343px] mb-10 xl:mb-0">
-        <img src="/img/code-image1.png" class="absolute bottom-0 left-0 z-50" alt="" />
-        <img src="/img/code-image2.png" class="absolute bottom-2 right-2 z-40" alt="" />
-        <img src="/img/code-image3.png" class="absolute bottom-0 right-0" alt="" />
+      <div class="relative h-[223px] w-[343px] mb-10 xl:mb-0 overflow-hidden">
+        <img src="/img/code-image1.png" class="absolute bottom-0 left-0 z-50 transition ease-out duration-500" :class="{ 'opacity-0': slider1Index >= 1 }" alt="" />
+        <img
+          src="/img/code-image2.png"
+          class="absolute bottom-2 right-2 z-40 transition ease-out duration-500"
+          :class="{ 'bottom-1 right-5 rotate-[3deg]': slider1Index === 1, 'bottom-1 right-5 opacity-0': slider1Index >= 2 }"
+          alt=""
+        />
+        <img
+          src="/img/code-image3.png"
+          class="absolute bottom-0 right-0 transition ease-out duration-500"
+          :class="{ 'right-1 rotate-[6deg]': slider1Index === 1, 'right-1 rotate-[9deg]': slider1Index === 2 }"
+          alt=""
+        />
       </div>
       <div class="xl:hidden">
         <h2 class="text-xl leading-8 font-semibold mb-3">Живые уроки по 3 раза в неделю</h2>
         <p class="text-[14px] mb-6">Только живые лекции с тренером-профессионалом из индустрии. Объяснение темы, разбор практики и ответы на вопросы проходят в лайф режиме.</p>
-        <div class="flex justify-end space-x-4">
-          <div class="w-12 h-12 rounded-full flex justify-center items-center arrow">
-            <img src="/ArrowLeft.svg" alt="arrow left" />
+        <div class="flex justify-end space-x-4 text-white">
+          <div class="w-12 h-12 rounded-full flex justify-center items-center bg-[#171729]">
+            <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.5 7.99976L2.5 7.99976" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M7 12.4998L2.5 7.99976L7 3.49976" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </div>
-          <div class="w-12 h-12 rounded-full flex justify-center items-center arrow">
-            <img src="/ArrowRight.svg" alt="arrow right" />
+          <div class="w-12 h-12 rounded-full flex justify-center items-center bg-[#171729]">
+            <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.5 7.99976H13.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 3.49976L13.5 7.99976L9 12.4998" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
         </div>
       </div>
       <div class="hidden xl:block w-[452px]">
-        <h2 class="text-[32px] font-bold leading-10 mb-4">Живые уроки с тренерами-экспертами</h2>
-        <p class="text-[18px] leading-8 max-w-sm mb-6">С нуля изучите синтаксис языка и научитесь создавать собственные алгоритмы по лучшим практикам, решать задачи любой сложности.</p>
-        <div class="flex space-x-4">
-          <div class="w-12 h-12 rounded-full flex justify-center items-center arrow">
-            <img src="/ArrowLeft.svg" alt="arrow left" />
+        <div class="max-w-[452px] overflow-hidden" wrapper>
+          <div class="flex transition-all duration-300" :style="{ 'margin-left': '-' + 100 * slider1Index + '%' }">
+            <div class="w-[452px] flex-none" v-for="(el, i) in slider1Data" :key="i">
+              <h2 class="text-[32px] font-bold leading-10 mb-4">{{ el.title }}</h2>
+              <p class="text-[18px] leading-8 max-w-sm mb-6">{{ el.text }}</p>
+            </div>
           </div>
-          <div class="w-12 h-12 rounded-full flex justify-center items-center arrow">
-            <img src="/ArrowRight.svg" alt="arrow right" />
-          </div>
+        </div>
+        <div class="flex space-x-4 text-white">
+          <button @click="slider1prev" :disabled="check1Prev" class="w-12 h-12 rounded-full flex justify-center items-center bg-[#171729] disabled:bg-opacity-50">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.5 7.99976L2.5 7.99976" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M7 12.4998L2.5 7.99976L7 3.49976" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <button @click="slider1next" :disabled="check1Next" class="w-12 h-12 rounded-full flex justify-center items-center bg-[#171729] disabled:bg-opacity-50">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.5 7.99976H13.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M9 3.49976L13.5 7.99976L9 12.4998" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
         </div>
       </div>
     </div>
@@ -273,7 +301,7 @@
       <div class="py-6">
         <div class="flex justify-between items-center">
           <p class="font-bold">Вводный модуль, переменные и типы данных</p>
-          <div class="flex items-center justify-center flex-none ml-5 w-8 h-8 rounded-full border plus">
+          <div class="flex items-center justify-center flex-none ml-5 w-8 h-8 rounded-full border bg-[#d98624]">
             <img src="/Plus.svg" alt="plus" />
           </div>
         </div>
@@ -361,54 +389,18 @@
       <div class="container flex">
         <div class="relative w-1/2">
           <div class="absolute top-0 -right-10 h-full w-px bg-[#D9862433]"></div>
-          <div class="flex flex-col space-y-20">
-            <div class="relative mx-8 mr-10 timeline-lg-circle first:-mb-8 timeline-active">
-              <p class="font-bold text-2xl w-[368px]">Вводный модуль, переменные и типы данных</p>
-            </div>
-            <div class="relative mx-8 mr-10 timeline-lg-circle">
-              <p class="font-bold text-2xl">Условия и циклы for, while, do-while</p>
-            </div>
-            <div class="relative mx-8 mr-10 timeline-lg-circle">
-              <p class="font-bold text-2xl">Строки, массивы и 2D массив</p>
-            </div>
-            <div class="relative mx-8 mr-10 timeline-lg-circle">
-              <p class="font-bold text-2xl">Методы и Аргументы</p>
-            </div>
-            <div class="relative mx-8 mr-10 timeline-lg-circle">
-              <p class="font-bold text-2xl">Объектно-ориентированное программирование</p>
-            </div>
-            <div class="relative mx-8 mr-10 timeline-lg-circle">
-              <p class="font-bold text-2xl w-[424px]">Графический интерфейс, Exceptions и коллекци</p>
-            </div>
-            <div class="relative mx-8 mr-10 timeline-lg-circle">
-              <p class="font-bold text-2xl">Работа с файлами, сериализация</p>
-            </div>
-            <div class="relative mx-8 mr-10 timeline-lg-circle">
-              <p class="font-bold text-2xl">Работа с сетями и многопоточностью</p>
-            </div>
-            <div class="relative mx-8 mr-10 timeline-lg-circle">
-              <p class="font-bold text-2xl">Работа с базой данных MySQL</p>
+          <div data-block class="flex flex-col space-y-20">
+            <div v-for="item in blockData" :key="item.id" @click="setActive($event, item.id)" class="relative mx-8 mr-10 transition-colors timeline-lg-circle">
+              <p class="font-bold text-2xl w-[368px]">{{ item.title }}</p>
             </div>
           </div>
         </div>
-        <div class="w-1/2 ml-[7.5rem] mt-2">
-          <h4 class="text-[18px] font-bold leading-8 mb-8">Вводный модуль, переменные и типы данных</h4>
+        <div class="w-1/2 ml-[7.5rem] mt-2" ref="blockContent">
+          <h4 class="text-[18px] font-bold leading-8 mb-8">{{ currentBlockData.title }}</h4>
           <ul class="space-y-6">
-            <li class="flex items-center w-[314px] text-[18px] leading-8">
+            <li v-for="(item, index) in currentBlockData.content" :key="index" class="flex items-center w-[314px] text-[18px] leading-8">
               <span class="w-2 h-2 mr-4 flex-none rounded-full block bg-black"></span>
-              Погружаемся в алгоритмы и структуры данных
-            </li>
-            <li class="flex items-center w-[345px] text-[18px] leading-8">
-              <span class="w-2 h-2 mr-4 flex-none rounded-full block bg-black"></span>
-              Boolean, условные операторы
-            </li>
-            <li class="flex items-center w-[361px] text-[18px] leading-6">
-              <span class="w-2 h-2 mr-4 flex-none rounded-full block bg-black"></span>
-              Изучаем три вида циклов и применяем их на реальных задачах
-            </li>
-            <li class="flex items-center w-[377px] text-[18px] leading-6">
-              <span class="w-2 h-2 mr-4 flex-none rounded-full block bg-black"></span>
-              Создаем мини приложения: калькулятор, определение траектории обучения и многое другое
+              {{ item }}
             </li>
           </ul>
         </div>
@@ -417,7 +409,7 @@
     </div>
   </section>
   <!-- 8 Section -->
-  <section class="bg-blue-secondary pt-8 pb-10 px-4 text-white xl:pt-20 xl:pb-[120px]">
+  <section class="bg-[#5424d9] pt-8 pb-10 px-4 text-white xl:pt-20 xl:pb-[120px]">
     <div class="xl:container">
       <h2 class="text-[32px] font-bold leading-10 mb-8 xl:text-[56px] xl:leading-[72px] xl:mb-18">Проекты в портфолио</h2>
       <div class="hidden xl:block bg-white text-black rounded-[25px] p-10 mb-6">
@@ -489,8 +481,8 @@
         </button>
       </div>
       <h2 class="text-[32px] font-bold leading-10 xl:hidden">Истории успеха наших студентов</h2>
-      <div class="my-8 flex space-x-3 overflow-x-auto scrollbars-hidden xl:my-0 xl:space-x-0 xl:grid xl:grid-cols-3 xl:gap-6">
-        <div class="px-4 relative w-72 xl:w-full border flex-shrink-0 border-gray-400 rounded-3xl overflow-hidden">
+      <div class="my-8 transition-all flex space-x-3 overflow-x-auto scrollbars-hidden xl:my-0 xl:space-x-0 xl:grid xl:grid-cols-3 xl:grid-rows-1 xl:gap-6">
+        <div v-for="(student, i) in slider2Data.slice(sliceValue, sliceValue + 3)" :key="i" class="px-4 relative w-72 xl:w-full border flex-shrink-0 border-gray-400 rounded-3xl overflow-hidden">
           <div class="absolute -top-5 -left-5 border-2 border-black p-1 rounded-3xl -rotate-45 xl:scale-125 xl:-left-3 xl:-top-1">
             <img src="/img/student.png" alt="stundent img" />
           </div>
@@ -498,43 +490,10 @@
             <img src="/img/company.png" alt="company png" />
           </div>
           <div class="xl:px-8 xl:pb-8">
-            <span class="text-[14px] text-[#5CC689] bg-[#5CC6891F] px-4 py-2 rounded-full xl:text-[15px]">Android Developer</span>
-            <h4 class="text-black font-semibold text-xl mt-4 leading-8 xl:text-2xl xl:mt-3">Зарлыков Темирлан</h4>
+            <span class="text-[14px] text-[#5CC689] bg-[#5CC6891F] px-4 py-2 rounded-full xl:text-[15px]">{{ student.job }}</span>
+            <h4 class="text-black font-semibold text-xl mt-4 leading-8 xl:text-2xl xl:mt-3">{{ student.name }}</h4>
             <p class="text-[14px] mb-6 xl:text-[15px]">
-              Два года назад я проходила обучение в BitLab academy по стеку «Java». Здесь очень сильные, позитивные и отзывчивые преподаватели. Мне очень понравился подход к обучению преподавателей.
-              Все предельно прозрачно объясняют, всегда придут на помощь, а также всегда в процессе развития и улучшения курсов.
-            </p>
-          </div>
-        </div>
-        <div class="px-4 relative w-72 xl:w-full border flex-shrink-0 border-gray-400 rounded-3xl overflow-hidden">
-          <div class="absolute -top-5 -left-5 border-2 border-black p-1 rounded-3xl -rotate-45 xl:scale-125 xl:-left-3 xl:-top-1">
-            <img src="/img/student.png" alt="stundent img" />
-          </div>
-          <div class="flex justify-end mt-8 mb-11 xl:mt-10 xl:mb-[60px] xl:mr-9">
-            <img src="/img/company.png" alt="company png" />
-          </div>
-          <div class="xl:px-8 xl:pb-8">
-            <span class="text-[14px] text-[#5CC689] bg-[#5CC6891F] px-4 py-2 rounded-full xl:text-[15px]">Android Developer</span>
-            <h4 class="text-black font-semibold text-xl mt-4 leading-8 xl:text-2xl xl:mt-3">Зарлыков Темирлан</h4>
-            <p class="text-[14px] mb-6 xl:text-[15px]">
-              Два года назад я проходила обучение в BitLab academy по стеку «Java». Здесь очень сильные, позитивные и отзывчивые преподаватели. Мне очень понравился подход к обучению преподавателей.
-              Все предельно прозрачно объясняют, всегда придут на помощь, а также всегда в процессе развития и улучшения курсов.
-            </p>
-          </div>
-        </div>
-        <div class="px-4 relative w-72 xl:w-full border flex-shrink-0 border-gray-400 rounded-3xl overflow-hidden">
-          <div class="absolute -top-5 -left-5 border-2 border-black p-1 rounded-3xl -rotate-45 xl:scale-125 xl:-left-3 xl:-top-1">
-            <img src="/img/student.png" alt="stundent img" />
-          </div>
-          <div class="flex justify-end mt-8 mb-11 xl:mt-10 xl:mb-[60px] xl:mr-9">
-            <img src="/img/company.png" alt="company png" />
-          </div>
-          <div class="xl:px-8 xl:pb-8">
-            <span class="text-[14px] text-[#5CC689] bg-[#5CC6891F] px-4 py-2 rounded-full xl:text-[15px]">Android Developer</span>
-            <h4 class="text-black font-semibold text-xl mt-4 leading-8 xl:text-2xl xl:mt-3">Зарлыков Темирлан</h4>
-            <p class="text-[14px] mb-6 xl:text-[15px]">
-              Два года назад я проходила обучение в BitLab academy по стеку «Java». Здесь очень сильные, позитивные и отзывчивые преподаватели. Мне очень понравился подход к обучению преподавателей.
-              Все предельно прозрачно объясняют, всегда придут на помощь, а также всегда в процессе развития и улучшения курсов.
+              {{ student.text }}
             </p>
           </div>
         </div>
@@ -547,19 +506,22 @@
         </svg>
       </div>
       <div class="hidden xl:flex justify-between items-center mb-32">
-        <div class="flex space-x-4 mt-6">
-          <div class="w-12 h-12 rounded-full flex justify-center items-center arrow">
-            <img src="/ArrowLeft.svg" alt="arrow left" />
-          </div>
-          <div class="w-12 h-12 rounded-full flex justify-center items-center arrow">
-            <img src="/ArrowRight.svg" alt="arrow right" />
-          </div>
+        <div class="flex space-x-4 mt-6 text-white">
+          <button @click="slider2prev" :disabled="check2Prev" class="w-12 h-12 rounded-full flex justify-center items-center bg-[#171729] disabled:bg-opacity-50">
+            <svg viewBox="0 0 16 16" fill="none" class="w-4 h-4" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.5 7.99976L2.5 7.99976" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M7 12.4998L2.5 7.99976L7 3.49976" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <button @click="slider2next" :disabled="check2Next" class="w-12 h-12 rounded-full flex justify-center items-center bg-[#171729] disabled:bg-opacity-50">
+            <svg viewBox="0 0 16 16" fill="none" class="w-4 h-4" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.5 7.99976H13.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M9 3.49976L13.5 7.99976L9 12.4998" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
         </div>
         <div class="flex space-x-1">
-          <span class="block h-[3px] w-12 bg-[#1717291F] rounded-full current-slide"></span>
-          <span class="block h-[3px] w-12 bg-[#1717291F] rounded-full"></span>
-          <span class="block h-[3px] w-12 bg-[#1717291F] rounded-full"></span>
-          <span class="block h-[3px] w-12 bg-[#1717291F] rounded-full"></span>
+          <span v-for="(item, i) in slider2Range" :key="i" :class="{ 'current-slide': currentSlide === i }" class="block h-[3px] w-12 bg-[#1717291F] rounded-full transition-colors"></span>
         </div>
       </div>
     </div>
@@ -753,3 +715,181 @@
     </div>
   </footer>
 </template>
+
+<script setup>
+import { ref, computed, onMounted } from "vue";
+const slider1Data = [
+  {
+    title: "Живые уроки с тренерами-экспертами 1",
+    text: "С нуля изучите синтаксис языка и научитесь создавать собственные алгоритмы по лучшим практикам, решать задачи любой сложности.",
+  },
+  {
+    title: "Живые уроки с тренерами-экспертами 2",
+    text: "С нуля изучите синтаксис языка и научитесь создавать собственные алгоритмы по лучшим практикам, решать задачи любой сложности.",
+  },
+  {
+    title: "Живые уроки с тренерами-экспертами 3",
+    text: "С нуля изучите синтаксис языка и научитесь создавать собственные алгоритмы по лучшим практикам, решать задачи любой сложности.",
+  },
+];
+const slider1Index = ref(0);
+
+const blockData = [
+  {
+    id: 0,
+    title: "Вводный модуль, переменные и типы данных",
+    content: [
+      "Погружаемся в алгоритмы и структуры данных",
+      "Boolean, условные операторы",
+      "Изучаем три вида циклов и применяем их на реальных задачах",
+      "Создаем мини приложения: калькулятор, определение траектории обучения и многое другое",
+    ],
+  },
+  {
+    id: 2,
+    title: "Условия и циклы for, while, do-while",
+    content: ["content2"],
+  },
+  {
+    id: 3,
+    title: "Строки, массивы и 2D массив",
+    content: ["content3", "content3.1"],
+  },
+  {
+    id: 4,
+    title: "Методы и Аргументы",
+    content: ["content4"],
+  },
+  {
+    id: 5,
+    title: "Объектно-ориентированное программирование",
+    content: ["content5"],
+  },
+  {
+    id: 6,
+    title: "Графический интерфейс, Exceptions и коллекци",
+    content: ["content6", "content6.1"],
+  },
+  {
+    id: 7,
+    title: "Работа с файлами, сериализация",
+    content: ["content7"],
+  },
+  {
+    id: 8,
+    title: "Работа с сетями и многопоточностью",
+    content: ["content8.0"],
+  },
+  {
+    id: 9,
+    title: "Работа с базой данных MySQL",
+    content: ["content9.0.1"],
+  },
+];
+
+const blockContent = ref(null);
+
+const currentBlockData = ref({});
+
+const slider2Data = [
+  {
+    name: "Зарлыков Темирлан 1",
+    job: "Android Developer",
+    text: "Два года назад я проходила обучение в BitLab academy по стеку «Java». Здесь очень сильные, позитивные и отзывчивые преподаватели. Мне очень понравился подход к обучению преподавателей. Все предельно прозрачно объясняют, всегда придут на помощь, а также всегда в процессе развития и улучшения курсов.",
+  },
+  {
+    name: "Зарлыков Темирлан 2",
+    job: "Android Developer",
+    text: "Два года назад я проходила обучение в BitLab academy по стеку «Java». Здесь очень сильные, позитивные и отзывчивые преподаватели. Мне очень понравился подход к обучению преподавателей. Все предельно прозрачно объясняют, всегда придут на помощь, а также всегда в процессе развития и улучшения курсов.",
+  },
+  {
+    name: "Зарлыков Темирлан 3",
+    job: "Android Developer",
+    text: "Два года назад я проходила обучение в BitLab academy по стеку «Java». Здесь очень сильные, позитивные и отзывчивые преподаватели. Мне очень понравился подход к обучению преподавателей. Все предельно прозрачно объясняют, всегда придут на помощь, а также всегда в процессе развития и улучшения курсов.",
+  },
+  {
+    name: "Зарлыков Темирлан 4",
+    job: "Android Developer",
+    text: "Два года назад я проходила обучение в BitLab academy по стеку «Java». Здесь очень сильные, позитивные и отзывчивые преподаватели. Мне очень понравился подход к обучению преподавателей. Все предельно прозрачно объясняют, всегда придут на помощь, а также всегда в процессе развития и улучшения курсов.",
+  },
+  {
+    name: "Зарлыков Темирлан 5",
+    job: "Android Developer",
+    text: "Два года назад я проходила обучение в BitLab academy по стеку «Java». Здесь очень сильные, позитивные и отзывчивые преподаватели. Мне очень понравился подход к обучению преподавателей. Все предельно прозрачно объясняют, всегда придут на помощь, а также всегда в процессе развития и улучшения курсов.",
+  },
+  {
+    name: "Зарлыков Темирлан 6",
+    job: "Android Developer",
+    text: "Два года назад я проходила обучение в BitLab academy по стеку «Java». Здесь очень сильные, позитивные и отзывчивые преподаватели. Мне очень понравился подход к обучению преподавателей. Все предельно прозрачно объясняют, всегда придут на помощь, а также всегда в процессе развития и улучшения курсов.",
+  }
+];
+
+const slider2Index = ref(0);
+
+const slider1prev = () => {
+  if (slider1Index.value > 0) {
+    slider1Index.value--;
+  }
+};
+
+const slider1next = () => {
+  if (slider1Index.value < slider1Data.length - 1) {
+    slider1Index.value++;
+  }
+};
+
+const check1Prev = computed(() => {
+  return slider1Index.value === 0;
+});
+const check1Next = computed(() => {
+  return slider1Index.value === slider1Data.length - 1;
+});
+
+const slider2prev = () => {
+  if (slider2Index.value > 0) {
+    slider2Index.value--;
+    sliceValue.value -= 3;
+  }
+};
+
+const slider2next = () => {
+  if (slider2Index.value < slider2Data.length / 3 - 1) {
+    slider2Index.value++;
+    sliceValue.value += 3;
+  }
+};
+
+const check2Prev = computed(() => {
+  return slider2Index.value === 0;
+});
+const check2Next = computed(() => {
+  return slider2Index.value === slider2Range.value - 1;
+});
+
+const sliceValue = ref(0);
+const slider2Range = computed(() => {
+  return Math.round(slider2Data.length / 3);
+});
+
+const currentSlide = computed(() => {
+  return sliceValue.value / 3;
+});
+
+const setActive = (event, id) => {
+  if (!event) {
+    document.querySelector("[data-block]").children[0].classList.add("timeline-active");
+  } else {
+    const blocks = event.target.closest("div.flex").children;
+    for (let i = 0; i < blocks.length; i++) {
+      blocks[i].classList.remove("timeline-active");
+    }
+    event.target.closest("div").classList.add("timeline-active");
+    currentBlockData.value = blockData.filter((el) => el.id === id)[0];
+  }
+};
+
+onMounted((_) => {
+  currentBlockData.value = blockData[0];
+  setActive(_, 0);
+});
+</script>

@@ -56,47 +56,6 @@
   }
 }
 
-.code,
-.stack,
-.gitfork,
-.puzzle-piece,
-.database,
-.grid-four {
-  border-radius: 20px;
-}
-
-.stack {
-  background: #6d6bd91f;
-}
-
-.gitfork {
-  background: #6bd9d91f;
-}
-
-.puzzle-piece {
-  background: #d9936b1f;
-}
-
-.database {
-  background: #d96ba01f;
-}
-
-.grid-four {
-  background: #d96b6b1f;
-}
-
-.arrow {
-  background: #171729;
-}
-
-.plus {
-  border-color: #d98624;
-}
-
-.bg-blue-secondary {
-  background: #5424d9;
-}
-
 .crypto-shadow {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
   border-radius: 20px;
