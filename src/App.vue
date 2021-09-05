@@ -283,7 +283,7 @@
       <div class="py-6">
         <div class="flex justify-between items-center">
           <p class="font-bold">Вводный модуль, переменные и типы данных</p>
-          <div class="flex items-center justify-center flex-none ml-5 w-8 h-8 rounded-full border bg-[#d98624]">
+          <div class="flex items-center justify-center flex-none ml-5 w-8 h-8 rounded-full border">
             <img src="/Plus.svg" alt="plus" />
           </div>
         </div>
@@ -306,7 +306,7 @@
       <div class="py-6">
         <div class="flex justify-between items-center">
           <p class="font-bold w-40">Строки, массивы и 2D массив</p>
-          <div class="flex items-center justify-center flex-none ml-5 w-8 h-8 rounded-full border plus">
+          <div class="flex items-center justify-center flex-none ml-5 w-8 h-8 rounded-full border">
             <img src="/Plus.svg" alt="plus" />
           </div>
         </div>
@@ -315,7 +315,7 @@
       <div class="py-6">
         <div class="flex justify-between items-center">
           <p class="font-bold w-32">Методы и Аргументы</p>
-          <div class="flex items-center justify-center flex-none ml-5 w-8 h-8 rounded-full border plus">
+          <div class="flex items-center justify-center flex-none ml-5 w-8 h-8 rounded-full border">
             <img src="/Plus.svg" alt="plus" />
           </div>
         </div>
@@ -324,7 +324,7 @@
       <div class="py-6">
         <div class="flex justify-between items-center">
           <p class="font-bold">Объектно-ориентированное программирование</p>
-          <div class="flex items-center justify-center flex-none ml-5 w-8 h-8 rounded-full border plus">
+          <div class="flex items-center justify-center flex-none ml-5 w-8 h-8 rounded-full border">
             <img src="/Plus.svg" alt="plus" />
           </div>
         </div>
@@ -333,7 +333,7 @@
       <div class="py-6">
         <div class="flex justify-between items-center">
           <p class="font-bold w-72">Графический интерфейс, Exceptions и коллекци</p>
-          <div class="flex items-center justify-center flex-none ml-5 w-8 h-8 rounded-full border plus">
+          <div class="flex items-center justify-center flex-none ml-5 w-8 h-8 rounded-full border">
             <img src="/Plus.svg" alt="plus" />
           </div>
         </div>
@@ -351,7 +351,7 @@
       <div class="py-6">
         <div class="flex justify-between items-center">
           <p class="font-bold w-52">Работа с сетями и многопоточностью</p>
-          <div class="flex items-center justify-center flex-none ml-5 w-8 h-8 rounded-full border plus">
+          <div class="flex items-center justify-center flex-none ml-5 w-8 h-8 rounded-full border">
             <img src="/Plus.svg" alt="plus" />
           </div>
         </div>
@@ -360,7 +360,7 @@
       <div class="py-6">
         <div class="flex justify-between items-center">
           <p class="font-bold w-44">Работа с базой данных MySQL</p>
-          <div class="flex items-center justify-center flex-none ml-5 w-8 h-8 rounded-full border plus">
+          <div class="flex items-center justify-center flex-none ml-5 w-8 h-8 rounded-full border">
             <img src="/Plus.svg" alt="plus" />
           </div>
         </div>
@@ -803,7 +803,7 @@ const slider2Data = [
     name: "Зарлыков Темирлан 6",
     job: "Android Developer",
     text: "Два года назад я проходила обучение в BitLab academy по стеку «Java». Здесь очень сильные, позитивные и отзывчивые преподаватели. Мне очень понравился подход к обучению преподавателей. Все предельно прозрачно объясняют, всегда придут на помощь, а также всегда в процессе развития и улучшения курсов.",
-  }
+  },
 ];
 
 const slider2Index = ref(0);
