@@ -246,34 +246,16 @@
           alt=""
         />
       </div>
-      <div class="xl:hidden">
-        <h2 class="text-xl leading-8 font-semibold mb-3">Живые уроки по 3 раза в неделю</h2>
-        <p class="text-[14px] mb-6">Только живые лекции с тренером-профессионалом из индустрии. Объяснение темы, разбор практики и ответы на вопросы проходят в лайф режиме.</p>
-        <div class="flex justify-end space-x-4 text-white">
-          <div class="w-12 h-12 rounded-full flex justify-center items-center bg-[#171729]">
-            <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13.5 7.99976L2.5 7.99976" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M7 12.4998L2.5 7.99976L7 3.49976" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </div>
-          <div class="w-12 h-12 rounded-full flex justify-center items-center bg-[#171729]">
-            <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.5 7.99976H13.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M9 3.49976L13.5 7.99976L9 12.4998" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div class="hidden xl:block w-[452px]">
-        <div class="max-w-[452px] overflow-hidden" wrapper>
+      <div class="xl:w-[452px]">
+        <div class="max-w-[343px] xl:max-w-[452px] mb-6 overflow-hidden">
           <div class="flex transition-all duration-300" :style="{ 'margin-left': '-' + 100 * slider1Index + '%' }">
-            <div class="w-[452px] flex-none" v-for="(el, i) in slider1Data" :key="i">
-              <h2 class="text-[32px] font-bold leading-10 mb-4">{{ el.title }}</h2>
-              <p class="text-[18px] leading-8 max-w-sm mb-6">{{ el.text }}</p>
+            <div class="xl:w-[452px] w-[343px] flex-none" v-for="(el, i) in slider1Data" :key="i">
+              <h2 class="text-xl font-semibold leading-8 mb-3 xl:text-[32px] xl:font-bold xl:leading-10 xl:mb-4">{{ el.title }}</h2>
+              <p class="text-[14px] leading-6 xl:text-[18px] xl:leading-8 max-w-sm">{{ el.text }}</p>
             </div>
           </div>
         </div>
-        <div class="flex space-x-4 text-white">
+        <div class="flex justify-end xl:justify-start space-x-4 text-white">
           <button @click="slider1prev" :disabled="check1Prev" class="w-12 h-12 rounded-full flex justify-center items-center bg-[#171729] disabled:bg-opacity-50">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path d="M13.5 7.99976L2.5 7.99976" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
